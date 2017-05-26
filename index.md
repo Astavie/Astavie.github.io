@@ -1,2 +1,2 @@
-# List of Mods
- - From the Ground Up
+# My mods
+## Minecraft
