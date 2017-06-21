@@ -3,5 +3,5 @@
 From the Ground Up (also known as FTGU) is a mod that adds research to Minecraft. It locks certain recipes until you have researched the technology that unlocks it. FTGU has CraftTweaker support, allowing mapmakers to add custom technologies.
 
 # Upcoming mods
-## [Scientific Method](https://github.com/TheRActivator/Scientific-Method)
+## [Scientific Method](https://github.com/TheRActivator/Scientific-Method) (On hold)
 A tech mod with progression. From steam power to electricity, and beyond!
