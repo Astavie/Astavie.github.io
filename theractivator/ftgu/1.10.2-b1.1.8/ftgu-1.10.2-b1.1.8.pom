@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>theractivator</groupId>
+  <artifactId>ftgu</artifactId>
+  <version>1.10.2-b1.1.8</version>
+  <dependencies>
+    <dependency>
+      <groupId>slimeknights.mantle</groupId>
+      <artifactId>Mantle</artifactId>
+      <version>1.10.2+</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>slimeknights</groupId>
+      <artifactId>TConstruct</artifactId>
+      <version>1.10.2+</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>mezz.jei</groupId>
+      <artifactId>jei_1.10.2</artifactId>
+      <version>+</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>MineTweaker3</groupId>
+      <artifactId>MineTweaker3-MC1102-Main</artifactId>
+      <version>+</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>blusunrize</groupId>
+      <artifactId>ImmersiveEngineering</artifactId>
+      <version>0.10+</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>
