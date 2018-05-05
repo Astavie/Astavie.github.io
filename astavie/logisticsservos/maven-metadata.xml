@@ -3,14 +3,15 @@
   <groupId>astavie</groupId>
   <artifactId>logisticsservos</artifactId>
   <versioning>
-    <release>0.1-5</release>
+    <release>0.1-6</release>
     <versions>
       <version>0.1-1</version>
       <version>0.1-2</version>
       <version>0.1-3</version>
       <version>0.1-4</version>
       <version>0.1-5</version>
+      <version>0.1-6</version>
     </versions>
-    <lastUpdated>20180503143741</lastUpdated>
+    <lastUpdated>20180505174458</lastUpdated>
   </versioning>
 </metadata>
