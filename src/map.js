@@ -31,7 +31,9 @@ $(document).ready(() => {
       svg.attr('width', '100%');
       svg.attr('height', '100%');
 
-      $(document).mousemove(function(e) {
+      let map = $(document);
+
+      map.mousemove(function(e) {
         if (clicked) {
           $('html').css('cursor', 'grabbing');
 
