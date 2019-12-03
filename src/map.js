@@ -47,6 +47,7 @@ $(document).ready(() => {
         clicked = true;
         clickX = e.pageX - map.scrollLeft();
         clickY = e.pageY - map.scrollTop();
+        console.log(clickX + ", " + clickY);
       }).bind('mousewheel', function(e) {
         let scale = 0.9;
         if (e.originalEvent.wheelDelta > 0)
