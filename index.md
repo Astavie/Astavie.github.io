@@ -5,3 +5,6 @@ From the Ground Up (also known as FTGU) is a mod that adds research to Minecraft
 Book Display allows the player to read books while moving, placing blocks, killing monsters, etc.
 ## [Thermal Logistics](https://github.com/Astavie/ThermalLogistics)
 Thermal Logistics is an addon for Thermal Dynamics that aims to recreate the magic of Logistics Pipes.
+
+# Other
+[Map](map)
