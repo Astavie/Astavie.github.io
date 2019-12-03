@@ -37,16 +37,16 @@ $(document).ready(() => {
         if (clicked) {
           $('html').css('cursor', 'grabbing');
 
-          map.scrollLeft(map.scrollLeft() + (clickX - e.pageX));
-          map.scrollTop(map.scrollTop() + (clickY - e.pageY));
+          let left = map.scrollLeft();
+          let top = map.scrollTop();
 
-          clickX = e.pageX - map.scrollLeft();
-          clickY = e.pageY - map.scrollTop();
+          map.scrollLeft(left + (clickX - e.pageX));
+          map.scrollTop(top + (clickY - e.pageY));
         }
       }).mousedown(function(e) {
         clicked = true;
-        clickX = e.pageX - map.scrollLeft();
-        clickY = e.pageY - map.scrollTop();
+        clickX = e.pageX;
+        clickY = e.pageY;
         console.log(clickX + ", " + clickY);
       }).bind('mousewheel', function(e) {
         let scale = 0.9;
@@ -65,8 +65,8 @@ $(document).ready(() => {
         svg.attr('width', (size * 100) + '%');
         svg.attr('height', (size * 100) + '%');
 
-        map.scrollLeft((map.scrollLeft() + w) * scale - w);
-        map.scrollTop((map.scrollTop() + h) * scale - h);
+        map.scrollLeft(w * scale - w + map.scrollLeft());
+        map.scrollTop(h * scale - h + map.scrollTop());
       }).mouseup(function() {
         clicked = false;
         $('html').css('cursor', 'auto');
