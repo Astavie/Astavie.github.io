@@ -40,13 +40,13 @@ $(document).ready(() => {
           map.scrollLeft(map.scrollLeft() + (clickX - e.pageX));
           map.scrollTop(map.scrollTop() + (clickY - e.pageY));
 
-          clickX = e.pageX;
-          clickY = e.pageY;
+          clickX = e.pageX - map.scrollLeft();
+          clickY = e.pageY - map.scrollTop();
         }
       }).mousedown(function(e) {
         clicked = true;
-        clickX = e.pageX;
-        clickY = e.pageY;
+        clickX = e.pageX - map.scrollLeft();
+        clickY = e.pageY - map.scrollTop();
       }).bind('mousewheel', function(e) {
         let scale = 0.9;
         if (e.originalEvent.wheelDelta > 0)
