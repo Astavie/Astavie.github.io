@@ -47,9 +47,8 @@ $(document).ready(() => {
         clicked = true;
         clickX = e.pageX;
         clickY = e.pageY;
-        console.log(clickX + ", " + clickY);
       }).bind('mousewheel', function(e) {
-        let scale = 0.9;
+        let scale = 0.75;
         if (e.originalEvent.wheelDelta > 0)
           scale = 1 / scale;
 
