@@ -111,21 +111,35 @@ function isStuck(x, y) {
     let cloth = grid[id][0];
 
     let orientation = cloth.orientation;
+    let found = false;
 
     for (let i = 0; i < 3; i++) {
-        let [xa, ya] = clockwise[orientation];
+        let [xa, ya] = cloth.mirror ? counterclockwise[orientation] : clockwise[orientation];
 
         x += xa;
         y += ya;
 
-        let next = getCloth(x, y, cloth.player, cloth.n);
-        if (next !== undefined && grid[x + y * width][0] != next) {
-            return true;
+        if (x < 0 || y < 0 || x >= width || y >= height) {
+            // Out of bounds
+            if (i == 0 || found) {
+                return true;
+            }
         }
 
-        orientation++;
+        let next = getCloth(x, y, cloth.player, cloth.n);
+        if (next !== undefined) {
+            found = true;
+            if (grid[x + y * width][0] != next) {
+                return true;
+            }
+        }
+
+        orientation += (cloth.mirror ? -1 : 1);
         if (orientation == 4) {
             orientation = 0;
+        }
+        if (orientation == -1) {
+            orientation = 3;
         }
     }
 
