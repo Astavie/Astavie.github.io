@@ -204,6 +204,11 @@ function refreshAmount(player) {
             },
             containment: 'document',
             helper: function() {
+                // Reset opacity of all cloths
+                $(".cloth").css("opacity", 1);
+                $(".arrow").remove();
+                selected = undefined;
+
                 return "<div class=\"hover p" + player + "\"><img src=\"" + cloth[player] + "\"></img></div>";
             }
         });
