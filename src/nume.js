@@ -107,6 +107,33 @@ function getCloths(x, y) {
     return cloths;
 }
 
+function isStuck(x, y) {
+    let id = x + y * width;
+
+    let cloth = grid[id][0];
+
+    let orientation = cloth.orientation;
+
+    for (let i = 0; i < 3; i++) {
+        let [xa, ya] = clockwise[orientation];
+
+        x += xa;
+        y += ya;
+
+        let next = getCloth(x, y, cloth.player, cloth.n);
+        if (next !== undefined && grid[x + y * width][0] != next) {
+            return true;
+        }
+
+        orientation++;
+        if (orientation == 4) {
+            orientation = 0;
+        }
+    }
+
+    return false;
+}
+
 function unfoldCloth(x, y) {
     let id = x + y * width;
     let cloth = grid[id][0];
@@ -344,11 +371,9 @@ $(document).ready(() => {
 
             let cloths = getCloths(x, y);
 
-            if (cloths.length < 4) {
-                for (let i = 0; i < cloths.length; i++) {
-                    // Set opacity of selected cloths
-                    $(".nume" + cloths[i] + " .cloth").css("opacity", 0.5);
-                }
+            for (let i = 0; i < cloths.length; i++) {
+                // Set opacity of selected cloths
+                $(".nume" + cloths[i] + " .cloth").css("opacity", 0.5);
             }
         }
     }).mousedown(function() {
@@ -374,7 +399,7 @@ $(document).ready(() => {
             $(".cloth").css("opacity", 1);
 
             let cloths = getCloths(x, y);
-            if (cloths.length === 0 || cloths.length === 4) {
+            if (cloths.length === 0 || cloths.length === 4 || isStuck(x, y)) {
                 selected = undefined;
             } else {
                 for (let i = 0; i < cloths.length; i++) {
@@ -393,7 +418,7 @@ $(document).ready(() => {
             let cloths = getCloths(x, y);
             for (let i = 0; i < cloths.length; i++) {
                 // Set opacity of selected cloths
-                $(".nume" + cloths[i] + " .cloth").css("opacity", cloths.length == 4 ? 1 : 0.5);
+                $(".nume" + cloths[i] + " .cloth").css("opacity", 0.5);
             }
         }
     }).droppable({
