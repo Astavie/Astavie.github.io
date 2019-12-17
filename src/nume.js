@@ -16,8 +16,6 @@ var placingPlayer = 0;
 var placingOrientation = 0;
 var placingMirror = false;
 
-var justplaced = false;
-
 // Direction to next cloth from current orientation
 var clockwise = [
     [1, 0],
@@ -355,11 +353,6 @@ $(document).ready(() => {
 
     $(".nume .col").mouseenter(function() {
         if (selected === undefined) {
-            if (justplaced) {
-                justplaced = false;
-                return;
-            }
-
             // Reset opacity of all cloths
             $(".cloth").css("opacity", 1);
 
