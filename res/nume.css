@@ -1,0 +1,113 @@
+.nume {
+    margin: auto;
+}
+
+.arrow {
+    pointer-events: none;
+    position: relative;
+}
+
+.arrow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.amount {
+    margin: auto;
+}
+
+.nume .col {
+    padding: 0;
+    border-style: solid;
+    border-width: 1px;
+
+    width: 50px;
+    height: 50px;
+
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.cloth {
+    width: 200%;
+}
+
+.cloth.right {
+    margin-left: -100%;
+}
+
+.cloth.bottom {
+    margin-top: -100%;
+}
+
+.placing {
+    width: 200%;
+}
+
+.placing.right {
+    margin-left: -100%;
+}
+
+.placing.bottom {
+    margin-top: -100%;
+}
+
+.amount img {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.hover {
+    width: 50px;
+    height: 50px;
+
+    overflow: hidden;
+}
+
+.hover img {
+    width: 200%;
+}
+
+.hover img.right {
+    margin-left: -100%;
+}
+
+.hover img.bottom {
+    margin-top: -100%;
+}
+
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.rotate180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.rotate270 {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}

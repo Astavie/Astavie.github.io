@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('body').load('src/map.svg', function() {
+  $('body').load('res/map.svg', function() {
       let gg = $("g g");
 
       // Set poppers
@@ -72,4 +72,3 @@ $(document).ready(() => {
       });
   });
 });
-
