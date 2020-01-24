@@ -63,9 +63,9 @@ This game even includes a full level editor! You can probably make better levels
 
 ![](http://g2f.nl/0b5cr22)
  
-This is basically a copy of the flash game [Chronotron](https://www.kongregate.com/games/scarybug/chronotron). You control a time machine which you can use to team up with your past selves to get the chip in each level.
+This is basically a copy of the flash game [Chronotron](https://www.kongregate.com/games/scarybug/chronotron). You have a time machine which you can use to team up with your past selves in order to get the chip in each level.
 
-This is my first game to include sound and configurable controls! Speaking of which...
+This is my first game to include sound, a cutscene and configurable controls! Speaking of which...
 
 **Controls:**
 - WASD to move
