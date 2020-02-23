@@ -34,7 +34,7 @@ $(document).ready(() => {
       svg.attr('width', '100%');
       svg.attr('height', '100%');
 
-      let map = $(document);
+      let map = $('div');
 
       map.mousemove(function(e) {
         if (clicked) {
