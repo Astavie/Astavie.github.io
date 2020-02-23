@@ -280,17 +280,5 @@
        style="fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
   <g
-     id="layer1">
-    <g
-       id="g904">
-      <desc
-         id="desc908">This is a test country</desc>
-      <title
-         id="title906">Testonia</title>
-      <path
-         style="fill:#999999;stroke:#cccccc;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.99481863;fill-opacity:1"
-         d="m 835.55416,70.304164 c 0,0 -24.87084,5.820834 -26.72292,10.847917 -1.85208,5.027083 -7.40833,23.547919 -4.7625,27.781249 2.64583,4.23333 44.71458,26.72292 50.53542,25.66458 5.82083,-1.05833 11.64166,-12.43541 12.7,-24.87083 1.05833,-12.435416 8.73125,-23.812499 -1.5875,-29.633332 -10.31875,-5.820834 -30.1625,-9.789584 -30.1625,-9.789584 z"
-         id="path901" />
-    </g>
-  </g>
+     id="layer1" />
 </svg>

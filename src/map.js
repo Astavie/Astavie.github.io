@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $('body').load('res/map.svg', function() {
+  $('div').load('res/map.svg', function() {
       let gg = $("g g");
 
       // Set poppers
