@@ -40,11 +40,11 @@ $(document).ready(() => {
         if (clicked) {
           $('html').css('cursor', 'grabbing');
 
-          let left = map.scrollLeft();
-          let top = map.scrollTop();
+          map.scrollLeft(map.scrollLeft() + (clickX - e.pageX));
+          map.scrollTop(map.scrollTop() + (clickY - e.pageY));
 
-          map.scrollLeft(left + (clickX - e.pageX));
-          map.scrollTop(top + (clickY - e.pageY));
+          clickX = e.pageX;
+          clickY = e.pageY;
         }
       }).mousedown(function(e) {
         clicked = true;
@@ -55,8 +55,8 @@ $(document).ready(() => {
         if (e.originalEvent.wheelDelta > 0)
           scale = 1 / scale;
 
-        let w = e.pageX;
-        let h = e.pageY;
+        let w = e.pageX - map.position().left;
+        let h = e.pageY - map.position().top;
 
         size *= scale;
         if (size < 1) {
@@ -67,8 +67,8 @@ $(document).ready(() => {
         svg.attr('width', (size * 100) + '%');
         svg.attr('height', (size * 100) + '%');
 
-        map.scrollLeft(w * scale - w + map.scrollLeft());
-        map.scrollTop(h * scale - h + map.scrollTop());
+        map.scrollLeft((map.scrollLeft() + w) * scale - w);
+        map.scrollTop((map.scrollTop() + h) * scale - h);
       }).mouseup(function() {
         clicked = false;
         $('html').css('cursor', 'auto');
