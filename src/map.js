@@ -25,32 +25,13 @@ $(document).ready(() => {
         $(this).css("opacity","1.0");
       });
 
-      var clicked = false;
-      var clickX = 0;
-      var clickY = 0;
-
       var size = 1;
       var svg = $('svg');
       svg.attr('width', '100%');
       svg.attr('height', '100%');
 
-      let map = $('div');
-
-      map.mousemove(function(e) {
-        if (clicked) {
-          $('html').css('cursor', 'grabbing');
-
-          map.scrollLeft(map.scrollLeft() + (clickX - e.pageX));
-          map.scrollTop(map.scrollTop() + (clickY - e.pageY));
-
-          clickX = e.pageX;
-          clickY = e.pageY;
-        }
-      }).mousedown(function(e) {
-        clicked = true;
-        clickX = e.pageX;
-        clickY = e.pageY;
-      }).bind('mousewheel', function(e) {
+      $('div').kinetic();
+      $('div').bind('mousewheel', function(e) {
         let scale = 0.75;
         if (e.originalEvent.wheelDelta > 0)
           scale = 1 / scale;
@@ -66,12 +47,10 @@ $(document).ready(() => {
 
         svg.attr('width', (size * 100) + '%');
         svg.attr('height', (size * 100) + '%');
+        svg.attr("style", "transition: .2s;");
 
         map.scrollLeft((map.scrollLeft() + w) * scale - w);
         map.scrollTop((map.scrollTop() + h) * scale - h);
-      }).mouseup(function() {
-        clicked = false;
-        $('html').css('cursor', 'auto');
-      });
+    });
   });
 });
