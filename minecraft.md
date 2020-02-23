@@ -1,7 +1,6 @@
 # Minecraft mods
-## [From the Ground Up!](https://github.com/Astavie/From-the-Ground-Up)
-From the Ground Up (also known as FTGU) is a mod that adds research to Minecraft. It locks certain recipes until you have researched the technology that unlocks it. Mapmakers can add custom technologies using JSON files.
-## [Book Display](https://github.com/Astavie/BookDisplay)
-Book Display allows the player to read books while moving, placing blocks, killing monsters, etc.
-## [Thermal Logistics](https://github.com/Astavie/ThermalLogistics)
-Thermal Logistics is an addon for Thermal Dynamics that aims to recreate the magic of Logistics Pipes.
+## 1.12
+ - [Thermal Logistics](https://www.curseforge.com/minecraft/mc-mods/thermallogistics)
+ - [Book Display](https://www.curseforge.com/minecraft/mc-mods/from-the-ground-up)
+ - [From the Ground Up!](https://www.curseforge.com/minecraft/mc-mods/from-the-ground-up) (Abandoned)
+ 
