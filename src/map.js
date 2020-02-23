@@ -30,8 +30,10 @@ $(document).ready(() => {
       svg.attr('width', '100%');
       svg.attr('height', '100%');
 
-      $('div').kinetic();
-      $('div').bind('mousewheel', function(e) {
+      let map = $('div');
+
+      map.kinetic();
+      map.bind('mousewheel', function(e) {
         let scale = 0.75;
         if (e.originalEvent.wheelDelta > 0)
           scale = 1 / scale;
