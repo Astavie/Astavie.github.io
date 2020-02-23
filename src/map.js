@@ -49,7 +49,6 @@ $(document).ready(() => {
 
         svg.attr('width', (size * 100) + '%');
         svg.attr('height', (size * 100) + '%');
-        svg.attr("style", "transition: .2s;");
 
         map.scrollLeft((map.scrollLeft() + w) * scale - w);
         map.scrollTop((map.scrollTop() + h) * scale - h);
