@@ -5,10 +5,13 @@ $(document).ready(() => {
       // Set poppers
       gg.each(function() {
         let element = $(this);
-        let id = element.attr('id');
+
+        let title = element.find('title').html();
+        let desc = element.find('desc').html();
+
         element.attr("data-toggle", "popover");
-        element.attr("title", id);
-        element.attr("data-content", "This is a country");
+        element.attr("title", title);
+        element.attr("data-content", desc);
         element.popover();
       })
 
