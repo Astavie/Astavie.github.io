@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ščaqng</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="src/scaqng.js"></script>
+        <style>
+            @font-face {
+                font-family: Scaqng;
+                src:url("res/Scaqng-Regular.otf");
+            }
+            #answer {
+                font-family: Scaqng;
+                font-size: 2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <div>
+                <br>
+                <h1>Ščaqng number converter</h1>
+                <form onsubmit="return convert();">
+                    <label for="decimal">Decimal: </label>
+                    <input type="number" id="decimal" name="decimal"><br>
+                    <input type="submit" value="Convert">
+                </form>
+                <p id="answer"></p>
+            </div>
+        </center>
+    </body>
+</html>
+
