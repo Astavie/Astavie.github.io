@@ -14,7 +14,7 @@ function convert() {
     
     if (decimal != 0) {
         for (const pair of numerals) {
-            while (decimal >= pair.dec) {
+            while (decimal > pair.dec) {
                 decimal -= pair.dec;
                 number += pair.num;
             }
