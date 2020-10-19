@@ -1,9 +1,7 @@
 var numerals = [
     {dec: 36, num: "f"},
-    {dec: 30, num: "rf"},
     {dec: 18, num: "n"},
     {dec: 6, num: "r"},
-    {dec: 5, num: "|r"},
     {dec: 3, num: "m"},
     {dec: 1, num: "|"}
 ]
