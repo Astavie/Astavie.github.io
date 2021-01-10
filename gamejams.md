@@ -19,6 +19,8 @@ MJ46 - [Infinity Room](https://itch.io/jam/mini-jam-46-justice/rate/556291) (#2 
 
 MJ54 - [Time Hack](https://itch.io/jam/mini-jam-54-memories/rate/646720) (#1 in Gameplay, top 1%)
 
+MJ71 - [Ricochet](https://itch.io/jam/mini-jam-71-puzzles/rate/880127)
+
 ## GMTK Game Jam
 
 2020 - [Revenge of the Snowball](https://itch.io/jam/gmtk-2020/rate/697509)
