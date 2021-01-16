@@ -1,6 +1,6 @@
 # Game Jams
 
-These are all the Game Jam games I've made over the years. After each link it says the category the game performed best in and in what top percentage of games that puts it in. Populous and Infinity room both had a top percentage of 4%, even though I got 108th in Populous, because way more people partake in Ludum Dare than in the Mini Jam (2889 vs 46 entries).
+These are all the Game Jam games I've made over the years. After each link it says the category the game performed best in and in what top percentage of games that puts it in. Populous and Infinity Room both had a top percentage of 4%, even though I got 108th in Populous, because way more people partake in Ludum Dare than in the Mini Jam (2889 vs 46 entries).
 
 ## Ludum Dare
 
