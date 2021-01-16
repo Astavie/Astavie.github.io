@@ -30,7 +30,7 @@ MJ71 - [Ricochet](https://itch.io/jam/mini-jam-71-puzzles/rate/880127) (#3 in En
 
 48 hours to create a game.
 
-2020 - [Revenge of the Snowball](https://itch.io/jam/gmtk-2020/rate/697509)
+2020 - [Revenge of the Snowball](https://itch.io/jam/gmtk-2020/rate/697509) (#3300 in Fun, top 62%)
 
 ## Trijam
 
