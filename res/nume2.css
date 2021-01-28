@@ -1,0 +1,26 @@
+#table {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.stack:hover .imgstack {
+    opacity: 50%;
+}
+
+.svg-text {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
