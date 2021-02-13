@@ -8,6 +8,21 @@ const startsWith = 12;
 
 var amount = Array(players).fill(startsWith);
 
+// Fix jquery
+$.ui.intersect_o = $.ui.intersect;
+$.ui.intersect = function (draggable, droppable, toleranceMode, event) {
+    if (droppable.proportions && !droppable.proportions().width && !droppable.proportions().height) {
+        if (typeof $(droppable.element).get(0).getBoundingClientRect === "function") {
+            droppable.proportionsBBox = droppable.proportionsBBox || $(droppable.element).get(0).getBoundingClientRect();
+            droppable.proportions = function () {
+                return droppable.proportionsBBox;
+            };
+        }
+    }
+
+    return $.ui.intersect_o(draggable, droppable, toleranceMode, event);
+};
+
 $(document).ready(() => {
 
     // Render table
@@ -41,7 +56,7 @@ $(document).ready(() => {
         img.setAttributeNS('http://www.w3.org/1999/xlink', 'href', cloth[player]);
         img.setAttributeNS(null, 'x', (posw * 2 + 2) * player);
         img.setAttributeNS(null, 'y', 102);
-        
+
         const text = $(document.createElementNS('http://www.w3.org/2000/svg', 'text'));
         text.attr('x', (posw * 2 + 2) * player + posw * 2 - 0.5);
         text.attr('y', 102 + posh * 2 - 0.5);
@@ -54,32 +69,43 @@ $(document).ready(() => {
         text.attr('class', 'svg-text');
         text.html(amount[player]);
 
-        const imgstack = $(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
-        imgstack.attr('class', 'imgstack');
-        imgstack.append(img);
-
         const stack = $(document.createElementNS('http://www.w3.org/2000/svg', 'g'));
         stack.attr('class', 'stack');
-        stack.append(imgstack);
+        stack.append(img);
         stack.append(text);
 
         stack.draggable({
-            revert: 'invalid',
             cursor: 'move',
             containment: "body",
             appendTo: "body",
-            helper: function() {
+            helper: function () {
                 return '<img class="svg-text" src="' + cloth[player] + '" width="' + img.getBoundingClientRect().width + '" height="' + img.getBoundingClientRect().height + '"></img>';
             },
-            start: function(_event, ui) {
+            start: function (_event, ui) {
+                // Keep track if the cloth has been dropped
                 ui.helper.data('dropped', false);
+
+                // Remove cloth from the stack
                 amount[player] -= 1;
                 text.html(amount[player]);
+
+                // Disable dragging if there are no more left in the stack
+                if (amount[player] <= 0) {
+                    stack.addClass("empty");
+                    stack.draggable('disable');
+                }
             },
-            stop: function(_event, ui) {
+            stop: function (_event, ui) {
                 if (!ui.helper.data('dropped')) {
+                    // Cloth was reverted, add it back to the stack
                     amount[player] += 1;
                     text.html(amount[player]);
+
+                    // Enable dragging again
+                    if (amount[player] >= 1) {
+                        stack.removeClass("empty");
+                        stack.draggable('enable');
+                    }
                 }
             }
         });
@@ -90,4 +116,18 @@ $(document).ready(() => {
     // Set svg size
     $("#table-svg").attr("viewBox", "0 0 " + (viewport_width) + " " + (viewport_height + posh * 2 + 4));
 
+    // Droppable
+    $("#table-svg-grid").droppable({
+        accept: "*",
+        tolerance: "pointer",
+        drop: function (_event, ui) {
+            // Something
+            ui.helper.data('dropped', true);
+            console.log("dropped");
+        }
+    });
+
 });
+
+// IDK WHY THIS WORKS BUT IT MAKES MOBILE NOT FUCK UP SO DON'T REMOVE
+document.addEventListener("touchmove", function () { });

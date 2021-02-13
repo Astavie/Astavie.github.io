@@ -6,15 +6,23 @@
 body {
     margin: 0;
     text-align: center;
+    height: 100vh;
 }
 
 #container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
 }
 
-.stack:hover .imgstack {
+image {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.empty image {
     opacity: 50%;
 }
 
