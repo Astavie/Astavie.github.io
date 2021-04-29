@@ -14,6 +14,8 @@ LD42 - [Finite Factory](https://ldjam.com/events/ludum-dare/42/finite-factory) (
 
 LD44 - [Hellish Souls](https://ldjam.com/events/ludum-dare/44/hellish-souls) (No placement given)
 
+LD48 - [Leaky Faucet](https://ldjam.com/events/ludum-dare/48/leaky-faucet)
+
 ## Mini Jam
 
 72 hours to create a game.
