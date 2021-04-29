@@ -38,4 +38,4 @@ MJ71 - [Ricochet](https://itch.io/jam/mini-jam-71-puzzles/rate/880127) (#3 in En
 
 3 hours to create a game.
 
-TJ103 - [Carrier](https://itch.io/jam/trijam-103/rate/885551)
+TJ103 - [Carrier](https://itch.io/jam/trijam-103/rate/885551) (#7 in Gameplay, top 37%)
