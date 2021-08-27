@@ -132,9 +132,9 @@ const bracketEnd = {
 }
 
 const bracketJoin = {
-    "{": "⎪",
-    "(": "⎜",
-    "[": "⎢",
+    "{": "<div>⎪</div",
+    "(": "<div>⎜</div",
+    "[": "<div>⎢</div",
 }
 
 const bracketClosing = {

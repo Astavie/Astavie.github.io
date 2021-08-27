@@ -6,7 +6,6 @@
 body {
     font-family: "Libertinus Math";
     font-weight: 400;
-    font-size: 1em;
     font-size: 2em;
 }
 
@@ -69,13 +68,15 @@ body {
 
 .curly > .left > :nth-child(2), .curly > .right > :nth-child(2), .curly > .left > :nth-child(4), .curly > .right > :nth-child(4) {
     height: 0;
-    line-height: .25em;
     display: flex;
     align-items: flex-end;
-    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
-    padding: calc(0.192708333333em) 0;
-    margin: calc(0.2890625em * var(--bracket-scale)) 0;
+    padding: calc(0.192708333333em + 0.2890625em * var(--bracket-scale)) 0;
     overflow: hidden;
+}
+
+.curly > .left > :nth-child(2) > div, .curly > .right > :nth-child(2) > div, .curly > .left > :nth-child(4) > div, .curly > .right > :nth-child(4) > div {
+    line-height: calc(0.3333em * var(--bracket-scale));
+    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
 }
 
 .curly > .left > :nth-child(3), .curly > .right > :nth-child(3) {
@@ -91,12 +92,16 @@ body {
 }
 
 .bracket > .left > :nth-child(2), .bracket > .right > :nth-child(2) {
-    height: 0em;
-    line-height:.25em;
-    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
-    padding: calc(0.385416666667em) 0;
-    margin: calc(0.578125em * var(--bracket-scale)) 0;
+    height: 0;
+    display: flex;
+    align-items: flex-start;
+    padding: calc(0.385416666667em + 0.578125em * var(--bracket-scale)) 0;
     overflow: hidden;
+}
+
+.bracket > .left > :nth-child(2) > div, .bracket > .right > :nth-child(2) > div {
+    line-height: calc(0.25em * var(--bracket-scale));
+    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
 }
 
 .right {
