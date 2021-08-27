@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Libertinus Math;
+    src: url(libertinusmath-regular.otf);
+}
+
+body {
+    font-family: "Libertinus Math";
+    font-weight: 400;
+    font-size: 1em;
+    font-size: 2em;
+}
+
+.rule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.root {
+    border: 1px solid black;
+    border-radius: 0.25em;
+    padding: 0.25em 0;
+}
+
+.root > :last-child {
+    width: 100%;
+}
+
+.input {
+    min-height: 1.15625em;
+    white-space: pre;
+    outline: 0px solid transparent;
+    padding: 0px 0.25em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bracket, .curly {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left, .right {
+    width: .25em;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    
+    cursor: default;
+    
+    transform: scale(1); /* Remove antialiasing */
+}
+
+.curly > .left > :nth-child(1), .curly > .right > :nth-child(1), .curly > .left > :nth-child(5), .curly > .right > :nth-child(5) {
+    height: 0.1em;
+    line-height: 0em;
+}
+
+.curly > .left > :nth-child(2), .curly > .right > :nth-child(2), .curly > .left > :nth-child(4), .curly > .right > :nth-child(4) {
+    height: 0;
+    line-height: .25em;
+    display: flex;
+    align-items: flex-end;
+    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
+    padding: calc(0.192708333333em) 0;
+    margin: calc(0.2890625em * var(--bracket-scale)) 0;
+    overflow: hidden;
+}
+
+.curly > .left > :nth-child(3), .curly > .right > :nth-child(3) {
+    height: .7em;
+    line-height: .3em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bracket > .left > :nth-child(1), .bracket > .right > :nth-child(1), .bracket > .left > :nth-child(3), .bracket > .right > :nth-child(3) {
+    height: 0.4em;
+    line-height: 0.7em;
+}
+
+.bracket > .left > :nth-child(2), .bracket > .right > :nth-child(2) {
+    height: 0em;
+    line-height:.25em;
+    transform: scaleY(calc(1 + 1.5 * var(--bracket-scale)));
+    padding: calc(0.385416666667em) 0;
+    margin: calc(0.578125em * var(--bracket-scale)) 0;
+    overflow: hidden;
+}
+
+.right {
+    transform: scaleX(-1);
+}
